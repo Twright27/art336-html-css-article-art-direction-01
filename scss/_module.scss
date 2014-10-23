@@ -1,0 +1,81 @@
+/* 
+Module Rules
+    A Module is a more discrete component of the page. It is your navigation bars and your carousels and your dialogs and your widgets and so on. This is the meat of the page. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too. Each Module should be designed to exist as a standalone component. In doing so, the page will be more flexible. If done right, Modules can easily be moved to different parts of the layout without breaking.
+    When defining the rule set for a module, avoid using IDs and element selectors, sticking only to class names. A module will likely contain a number of elements and there is likely to be a desire to use descendent or child selectors to target those elements. 
+*/
+
+.toggle-button {
+    background-color: $color;
+    color: #fff;
+    display: inline-block;
+    @include headline-font;
+    padding: 0 4px;
+    text-decoration: none;
+}
+
+nav[role="navigation"] ul a {
+    border: 1px solid $color;
+    color: $color;
+    diplay: inline-block;
+    @include fontSize(16px);
+    @include headline-font;
+    margin-left: 8px;
+    padding: 0 4px;
+    text-decoration: none;
+    transition: border 400ms linear;
+    transition: border color 400ms linear;
+}
+
+nav[role="navigation"] ul a:hover {
+    border: 1px solid lighten($color, 30%);
+    color: lighten($color,30);
+    transition: border 400ms linear;
+    transition: border color 400ms linear;
+}
+
+header[role="banner"] {
+    background-color: $color;
+    color: $background-color;
+    padding: 12px;
+}
+
+header[role="banner"] {
+    background-color: $color;
+    color: #fffefe;
+    padding: 12px;
+}
+
+header[role="banner"] img {
+    border-radius: 50%;
+    width: 75%;
+}
+
+header[role="banner"] p {
+    @include fontSize(23px);   
+}
+
+header[role="banner"] a {
+    color: $background-color;
+    @include body-font-italic;
+    transition: color 400ms linear;
+}
+
+header[role="banner"] a:hover {
+    color: darken($background-color, 12%);
+    transition: color 400ms linear;
+}
+
+main[role="main"] h1 {
+    background-color: $color;
+    color: #fff;
+    padding: 5px 0px 0px 0px;
+    text-align: center;
+
+}
+
+footer[role="contentinfo"] {
+    background-color: $color;
+    color: #fff;
+    line-height: 1;
+    padding: 4px 8px 8px 8px;
+}
